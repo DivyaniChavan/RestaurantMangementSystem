@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- Added link for thymeleaf-->
+<head>
+<meta charset="ISO-8859-1">
+<title>Restaurant Management System</title>
+
+<!-- Added cdn link for bootstrap 4 -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Favicon -->
+<link href="img/favicon.ico" rel="icon">
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap"
+	rel="stylesheet">
+
+<!-- Icon Font Stylesheet Ex.Facebook,Insta-->
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+	rel="stylesheet">
+
+</head>
+<body>
+
+	<!-- Background image -->
+	<div class="p-5 text-center bg-image"
+		style="background-image: url('https://wallpapercave.com/wp/wp7076634.jpg'); height: 600px;">
+		<div class="container ">
+			<div class="row">
+				<h1>List Customer</h1>
+			</div>
+
+			<div class="row">
+				<div class="d-grid col-5 mx-auto">
+					<a th:href="@{/Cust/New}" class="btn btn-success">Add Customer</a>
+				</div>
+			</div>
+
+			<table class="table table-striped table-bordered ">
+				<thead class="table-warning">
+					<tr>
+						<th>Customer ID</th>
+						<th>Customer FName</th>
+						<th>Customer LName</th>
+						<th>Customer Email</th>
+						<th>Customer PhoneNumber</th>
+						<th>Customer Password</th>
+						<th>Actions</th>
+					</tr>
+
+				</thead>
+				<tbody class="table-info table-group-divider">
+					<tr th:each="cust: ${customer}">
+						<td th:text="${cust.id}"></td>
+						<td th:text="${cust.firstName}"></td>
+						<td th:text="${cust.lastName}"></td>
+						<td th:text="${cust.email}"></td>
+						<td th:text="${cust.phonenumber}"></td>
+						<td th:text="${cust.password}"></td>
+						<td><a th:href="@{/Cust/edit/{id}(id = ${cust.id})}"
+							class="btn btn-success btn-sm mb-2"> Update </a> <a
+							th:href="@{/Cust/delete/{id}(id = ${cust.id})}"
+							class="btn btn-success btn-sm mb-2"> Delete </a></td>
+			</table>
+
+		</div>
+	</div>
+
+
+	<!-- Bootstrap Footer -->
+	<footer class="bg-dark text-white text-center py-3">
+		<p>&copy; 2024 Restaurant Management System</p>
+		<!-- Facebook -->
+		<a class="btn text-white" data-mdb-ripple-init
+			style="background-color: #3b5998;" href="#!" role="button"> <i
+			class="fab fa-facebook-f"></i>
+		</a>
+
+		<!-- Twitter -->
+		<a class="btn text-white" data-mdb-ripple-init
+			style="background-color: #55acee;" href="#!" role="button"> <i
+			class="fab fa-twitter"></i>
+		</a>
+
+		<!-- Instagram -->
+		<a class="btn text-white" data-mdb-ripple-init
+			style="background-color: #ac2bac;" href="#!" role="button"> <i
+			class="fab fa-instagram"></i>
+		</a>
+
+		<!-- Whatsapp -->
+		<a class="btn text-white" data-mdb-ripple-init
+			style="background-color: #25d366;" href="#!" role="button"> <i
+			class="fab fa-whatsapp"></i>
+		</a>
+	</footer>
+</body>
+</html>

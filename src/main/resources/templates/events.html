@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Restaurant Management System</title>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Icon Font Stylesheet -->
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+	rel="stylesheet">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+	rel="stylesheet">
+
+</head>
+<body>
+	<div class=""
+		style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNSLYjAnnvd8223t4uLF4_KWDB-v4ax6RktQ&usqp=CAU'); height: auto;">
+		<div class="container-xxl position-relative p-0">
+			<nav
+				class="navbar navbar-expand-lg navbar-dark  px-4 px-lg-5 py-3 py-lg-0">
+				<a th:href="@{/index}" class="navbar-brand p-0"> <i
+					class="fa fa-utensils me-3"></i> Divz Delights
+				</a>
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse"></div>
+
+				<div class="navbar-nav ms-auto py-0 pe-4 text-white">
+						<a th:href="@{/index}" class="nav-item nav-link active text-white">Home</a>
+						<a th:href="@{/menu}" class="nav-item nav-link active text-white">Menu's</a>
+						<a th:href="@{/about}" class="nav-item nav-link active text-white">About</a>
+						<a th:href="@{/gallery}"
+							class="nav-item nav-link active text-white">Our-Gallery</a> <a
+							th:href="@{/events}" class="nav-item nav-link active text-white">Events</a>
+						<a th:href="@{/contact}"
+							class="nav-item nav-link active text-white">Contact-Us</a> 
+						<a th:href="@{/UserLogin}" class="nav-item nav-link text-white">User</a>	
+						<a th:href="@{/AddLogin}" class="nav-item nav-link text-white">Admin</a>
+					</div>
+			</nav>
+		</div>
+	</div>
+	<section id="events" class="events">
+		<div class="container">
+
+			<div class="section-title">
+				<h2>
+					<font style="Font-Family: monotype corsiva; text-align: center;">Organize
+						Your <span>Events</span> in our Restaurant
+					</font>
+				</h2>
+			</div>
+
+			<div class="events-slider swiper">
+				<div class="swiper-wrapper">
+
+					<div class="swiper-slide">
+						<div class="row event-item">
+							<div class="col-lg-6">
+								<img
+									src="https://m.media-amazon.com/images/I/8106LD1R01L._AC_UF894,1000_QL80_.jpg"
+									class="img-fluid" alt="">
+							</div>
+							<div class="col-lg-6 pt-4 pt-lg-0 content">
+								<h3>
+									<font
+										style="Font-Family: monotype corsiva; text-align: center; font-size: 40px">Birthday
+										Parties</font>
+								</h3>
+
+								<p>
+									"Celebrate the tapestry of life at <b>Divz Delights</b>, where
+									moments unfold like petals in a garden of joy. In the heart of
+									our culinary haven, your birthday becomes a symphony of
+									flavors, a dance of laughter, and a canvas of memories painted
+									with the strokes of delight.
+								</p>
+								<p>
+									Embrace the magic, savor the taste, and let your special day be
+									a masterpiece at <b>Divz Delights</b>. For in the tapestry of
+									life, a birthday at our table is a thread that weaves happiness
+									into every moment. Cheers to another year of love, laughter,
+									and delectable celebrations!"
+								</p>
+
+								<img
+									src="https://images.saymedia-content.com/.image/t_share/MTk5NTc0NjMxMDg0OTkxNTkx/alternative-ways-to-say-happy-birthday.png"
+									class="img-fluid" alt="">
+							</div>
+						</div>
+					</div>
+					<!-- End testimonial item -->
+					<div>
+						<br>
+					</div>
+					<div class="swiper-slide">
+						<div class="row event-item">
+							<div class="col-lg-5">
+								<img
+									src="https://static.vecteezy.com/system/resources/thumbnails/004/342/719/small/live-music-gold-hand-drawn-font-design-free-vector.jpg">
+							</div>
+							<div class="col-lg-6">
+								<h3>
+									<font
+										style="Font-Family: monotype corsiva; text-align: center; font-size: 40px">
+										Live Music Nights</font> <img
+										src="https://i.gifer.com/origin/9d/9d0f84336451fc41e6dbc927f9bdf618_w200.webp">
+								</h3>
+							</div>
+						</div>
+					</div>
+					<div class="text-align: center;">
+						"Uplift your spirit, savor the essence, and let the music of the
+						night be the soundtrack to your dining delight"<br>
+						"Experience the magic – where culinary artistry meets the poetry
+						of music, and every beat is a celebration of life's grand concert"<br>
+						"There's nothing better than live music. It's raw energy, and raw
+						energy feeds the soul"
+					</div>
+					<div>
+						<br>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End testimonial item -->
+		<div class="swiper-slide">
+			<div class="row event-item">
+				<div class="col-lg-6 ml-5">
+					<img
+						src="https://media.licdn.com/dms/image/D4E12AQHKu7ScJBcVKQ/article-cover_image-shrink_720_1280/0/1698236922400?e=2147483647&v=beta&t=yQ_jNSTMVJiSEo3TG_uYw9vOP3UkHz2FyrIQOCRlnVc"
+						class="img-fluid" alt="">
+				</div>
+				<div class="col-lg-5 pt-4 content">
+					<h3>
+						<font
+							style="Font-Family: monotype corsiva; text-align: center; font-size: 40px">
+							Seasonal Celebrations</font>
+					</h3>
+					<p class="fst-italic">"Embrace the bloom of flavors with our
+						Spring Festival, where every dish is a celebration of nature's
+						renewal."<br>
+						 "Sizzle up your summer with our BBQs – where the sun
+						meets the grill, and every bite is a taste of the season."<br>
+						"Celebrate the Festival of Lights with us! Our Diwali feast is a
+						symphony of colors and flavors, lighting up your palate."<br>
+						 "Love is always on the menu. Join us for a Valentine's Day celebration
+						filled with romantic ambiance and delectable dishes."<br>
+						"Jingle all	the way to a festive feast! Our Christmas menu sparkles with joy
+						and flavors of the season."</p>
+				</div>
+			</div>
+		</div>
+		<!-- End testimonial item -->
+	</section>
+	<!-- End Events Section -->
+	<!-- Bootstrap Footer -->
+	<div><br></div>
+	<footer class="bg-dark text-white text-center py-3">
+		<p>&copy; 2024 Divz Delights</p>
+		<!-- Facebook -->
+		<a class="btn text-white" data-mdb-ripple-init
+			style="background-color: #3b5998;" href="#!" role="button"> <i
+			class="fab fa-facebook-f"></i>
+		</a>
+
+		<!-- Twitter -->
+		<a class="btn text-white" data-mdb-ripple-init
+			style="background-color: #55acee;" href="#!" role="button"> <i
+			class="fab fa-twitter"></i>
+		</a>
+
+		<!-- Instagram -->
+		<a class="btn text-white" data-mdb-ripple-init
+			style="background-color: #ac2bac;" href="#!" role="button"> <i
+			class="fab fa-instagram"></i>
+		</a>
+
+		<!-- Whatsapp -->
+		<a class="btn text-white" data-mdb-ripple-init
+			style="background-color: #25d366;" href="#!" role="button"> <i
+			class="fab fa-whatsapp"></i>
+		</a>
+	</footer>
+	<!-- Bootstrap JS and dependencies -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

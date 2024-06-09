@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>User Dashboard</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Icon Font Stylesheet -->
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+	rel="stylesheet">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+</head>
+<body>
+	<div>
+		<div class=""
+			style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNSLYjAnnvd8223t4uLF4_KWDB-v4ax6RktQ&usqp=CAU'); height: auto;">
+			<div class="container-xxl position-relative p-0">
+				<nav
+					class="navbar navbar-expand-lg navbar-dark  px-4 px-lg-5 py-3 py-lg-0">
+					<a th:href="@{/index}" class="navbar-brand p-0"> <i
+						class="fa fa-utensils me-3"></i> Divz Delights
+					</a>
+					<button class="navbar-toggler" type="button"
+						data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+					</button>
+					<div class="collapse navbar-collapse" id="navbarCollapse"></div>
+
+					<div class="navbar-nav ms-auto py-0 pe-4">
+						<a th:href="@{/index}" class="nav-item nav-link active">Home</a> <a
+							th:href="@{/about}" class="nav-item nav-link active">About</a> <a
+							th:href="@{/gallery}" class="nav-item nav-link active">Our-Gallery</a>
+						<a th:href="@{/events}" class="nav-item nav-link active">Events</a>
+						<a th:href="@{/contact}" class="nav-item nav-link active">Contact-Us</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div>
+			<br>
+		</div>
+		<div class="col-md-6">
+			<img
+				src="https://blog.dineout-cdn.co.in/blog/wp-content/uploads/2022/05/Untitled-design-45-1-845x321.png"
+				alt="Image" class="img-fluid">
+		</div>
+		<div class="navbar-nav py-6 pe-4">
+		<div margin="50px;">
+		<a th:href="@{/getAllbreakfast}" class="nav-item nav-link active">Breakfast Menu Items</a>
+		<a th:href="@{/contact}" class="nav-item nav-link active">Lunch Menu Items</a>
+		<a th:href="@{/contact}" class="nav-item nav-link active">Dinner Menu Items</a>
+		</div></div>
+
+	</div>
+</body>
+</html>

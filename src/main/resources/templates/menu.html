@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Restaurant Management System</title>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Icon Font Stylesheet -->
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+	rel="stylesheet">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+
+<style th:inline="text">
+body {
+	font-family: 'Arial', sans-serif;
+	text-align: center;
+	font-size: 18px
+}
+
+quote {
+	font-style: italic;
+	margin-bottom: 20px;
+}
+</style>
+
+</head>
+<body>
+	<div class=""
+		style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNSLYjAnnvd8223t4uLF4_KWDB-v4ax6RktQ&usqp=CAU'); height: auto;">
+		<div class="container-xxl position-relative p-0">
+			<nav
+				class="navbar navbar-expand-lg navbar-dark  px-4 px-lg-5 py-3 py-lg-0">
+				<a th:href="@{/index}" class="navbar-brand p-0"> <i
+					class="fa fa-utensils me-3"></i> Divz Delights
+				</a>
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse"></div>
+
+				<div class="navbar-nav ms-auto py-0 pe-4 text-white">
+					<a th:href="@{/index}" class="nav-item nav-link active text-white">Home</a>
+					<a th:href="@{/menu}" class="nav-item nav-link active text-white">Menu's</a>
+					<a th:href="@{/about}" class="nav-item nav-link active text-white">About</a>
+					<a th:href="@{/gallery}"
+						class="nav-item nav-link active text-white">Our-Gallery</a> <a
+						th:href="@{/events}" class="nav-item nav-link active text-white">Events</a>
+					<a th:href="@{/contact}"
+						class="nav-item nav-link active text-white">Contact-Us</a> <a
+						th:href="@{/UserLogin}" class="nav-item nav-link text-white">User</a>
+					<a th:href="@{/AddLogin}" class="nav-item nav-link text-white">Admin</a>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<!-- Menu Start -->
+	<div class="container-xxl py-5">
+		<div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
+			<ul class="nav nav-pills mb-3">
+				<li class="nav-item"><a class="nav-link "
+					data-toggle="pill" href="/getpopularbreakfast"> <img alt=""
+						src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						width="100" height="100"> Breakfast
+				</a></li>
+				<li class="nav-item"><a class="nav-link" data-toggle="pill"
+					href="/getpopularlunch"> <img alt=""
+						src="https://images.unsplash.com/photo-1546793665-c74683f339c1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+						width="100" height="100"> Lunch
+				</a></li>
+				<li class="nav-item"><a class="nav-link" data-toggle="pill"
+					href="/getpopulardinner"> <img alt=""
+						src="https://media.istockphoto.com/id/868408746/photo/assorted-indian-dish.webp?b=1&s=170667a&w=0&k=20&c=ae-29IvyAog_Bth2OhAWLvsIs_Ry7wY5wBgk3UfqvAM="
+						width="100" height="100"> Dinner
+				</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- Menu End -->
+	<!-- Bootstrap Footer -->
+	<footer class="bg-dark text-white text-center py-3">
+		<p>&copy; 2024 Divz Delights</p>
+		<!-- Facebook -->
+		<a class="btn text-white" data-mdb-ripple-init
+			style="background-color: #3b5998;" href="#!" role="button"> <i
+			class="fab fa-facebook-f"></i>
+		</a>
+
+		<!-- Twitter -->
+		<a class="btn text-white" data-mdb-ripple-init
+			style="background-color: #55acee;" href="#!" role="button"> <i
+			class="fab fa-twitter"></i>
+		</a>
+
+		<!-- Instagram -->
+		<a class="btn text-white" data-mdb-ripple-init
+			style="background-color: #ac2bac;" href="#!" role="button"> <i
+			class="fab fa-instagram"></i>
+		</a>
+
+		<!-- Whatsapp -->
+		<a class="btn text-white" data-mdb-ripple-init
+			style="background-color: #25d366;" href="#!" role="button"> <i
+			class="fab fa-whatsapp"></i>
+		</a>
+	</footer>
+	<!-- Footer End -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+</body>
+
+</html>

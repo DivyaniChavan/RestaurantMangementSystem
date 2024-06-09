@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Admin-Dashboard</title>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+<style>
+body {
+	background-color: #f8f9fa;
+}
+
+.sidebar {
+	height: 100%;
+	width: 250px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #343a40;
+	padding-top: 56px;
+}
+
+.content {
+	background-image: url('/images/ash.jpeg');
+	margin-left: 250px;
+	padding: 50px;
+}
+
+.nav-link {
+	color: #f8f9fa !important;
+}
+
+.navbar {
+	background-color: #343a40;
+}
+
+.navbar-brand {
+	color: #f8f9fa !important;
+}
+
+.navbar-toggler {
+	color: #f8f9fa !important;
+	border-color: #f8f9fa;
+}
+
+.card {
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+	background-color: #f8f9fa;
+	border-bottom: 1px solid #dee2e6;
+}
+
+.card-title {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+		<a class="navbar-brand" href="/AddLogin">Dashboard</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarNav" aria-controls="navbarNav"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ml-auto">
+
+				<li class="nav-item"><a class="nav-link" href="/index">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="sidebar">
+		<ul class="nav flex-column">
+			<li class="nav-item"><a class="nav-link active"
+				href="/AddLogins"> Admin </a></li>
+			<li class="nav-item"><a class="nav-link" href="#"> Service
+					request </a></li>
+			<li class="nav-item"><a class="nav-link" href="#"> Users </a></li>
+			<li class="nav-item"><a class="nav-link" href="/getAllbreakfast">
+					Added Breakfast </a></li>
+			<li class="nav-item"><a class="nav-link" href="/getadedAlllunch">
+					Added Lunch </a></li>
+			<li class="nav-item"><a class="nav-link"
+				href="/getadedAlldinner"> Added Dinner </a></li>
+
+		</ul>
+	</div>
+
+	<div class="content">
+		<div class="container-fluid">
+
+			<div class="row">
+				<div class="col-md-4">
+					<div class="card" style="width: 18rem;">
+						<img class="card-img-top"
+							src="https://img.freepik.com/free-photo/delicious-breakfast-meal-assortment_23-2148878829.jpg"
+							alt="Card image cap">
+
+						<div class="card-header">
+							<a th:href="@{/Addbreakfast}" class="btn btn-primary">Add
+								Breakfast</a>
+						</div>
+						<div class="card-body">
+							<p class="card-text">Add breakfast menus</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card" style="width: 18rem;">
+						<img class="card-img-top"
+							src="https://i.pinimg.com/736x/c4/af/6c/c4af6cf86577cdc33dd7566e46483341.jpg"
+							alt="Card image cap">
+
+						<div class="card-header">
+							<a th:href="@{/getAlllunch}" class="btn btn-primary">Add
+								Lunch</a>
+						</div>
+						<div class="card-body">
+							<p class="card-text">Add lunch menus</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card" style="width: 18rem;">
+						<img class="card-img-top"
+							src="https://c.ndtvimg.com/2022-03/jcliv9dg_shahi-paneer_625x300_15_March_22.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=886"
+							alt="Card image cap">
+
+						<div class="card-header">
+							<a th:href="@{/Adddinner}" class="btn btn-primary">Add Dinner</a>
+						</div>
+						<div class="card-body">
+							<p class="card-text">Add dinner menus</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- Bootstrap JS and Popper.js -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

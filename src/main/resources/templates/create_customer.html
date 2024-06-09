@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Restaurant Management System</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<!-- Background image -->
+  <div
+    class=" img-thumbnail d-flex justify-content-end "
+    style="
+      background-image: url('https://media.istockphoto.com/id/1169630303/photo/blue-textured-background.webp?b=1&s=170667a&w=0&k=20&c=tI2xFhXqXFqMM0IvxSYY3F7LIwv450h2ch3yD-lZ9HU=');
+      height: 600px;
+      width:50%
+      
+    ">
+    <div class="container ">
+		<div class="row">
+			<div class=" container justify-content-center-card text-white text-center py-3">
+				<h1 class="text-center"> Create New Customer </h1>
+				<div class="d-inline-flex p-2 ">
+					<form th:action="@{/Cust/save}" th:object="${customer}" method="POST">
+						<div class="form-group">
+							<label>Customer First Name </label>
+							<input class="form-control" type="text" name="firstName" th:field="*{firstName}"/>
+						</div>
+						
+						<div class="form-group">
+							<label>Customer Last Name </label>
+							<input class="form-control" type="text" name="lastName" th:field="*{lastName}"/>
+						</div>
+						<div class="form-group">
+							<label>Customer Email </label>
+							<input class="form-control" type="text" name="email" th:field="*{email}"/>
+						</div>
+						<div class="form-group">
+							<label>Customer Phone_Number </label>
+							<input class="form-control" type="text" name="phonenumber" th:field="*{phonenumber}"/>
+						</div>
+						<div class="form-group">
+							<label>Customer Password </label>
+							<input class="form-control" type="text" name="password" th:field="*{password}"/>
+						</div>
+						
+						<div class="Box-footer ">
+							<button type="submit" class="btn btn-success">
+								Submit
+							</button>
+							
+						</div>
+					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

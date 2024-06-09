@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Coding by CodingNepal | www.codingnepalweb.com-->
+<html lang="en" dir="ltr" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <title> Login and Registration Form in HTML & CSS | CodingLab </title>
+    <!-- font awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+   
+    
+    </style>
+   </head>
+<body>
+    
+    <form th:action="@{/menu}" method="post">
+    
+    <div class="imgcontainer">
+      <img src="https://logowik.com/content/uploads/images/kid-chef1358.logowik.com.webp" alt="Avatar" width=350px; height=250px;>
+    </div>
+    <h2 class="text-center mb-4">Sign In</h2>
+        <div class="form-group">
+            <label for="username">User-Name:</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Login</button>
+         <p th:if="${error}" style="color: red" th:text="${error}"></p>
+    </form>
+</body>
+</html>
